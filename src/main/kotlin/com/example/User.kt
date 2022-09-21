@@ -9,7 +9,7 @@ import javax.persistence.Table
 @Entity
 @Table(name = "users")
 class User(
-    private val name: String
+    val name: String
 ) {
 
     @Id
