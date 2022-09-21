@@ -1,0 +1,30 @@
+spring:
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        show_sql: false
+        use_sql_comments: true
+        format_sql: false
+        default_batch_fetch_size: 100
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:13306/test-db
+    username: root
+    password: 1234
+    hikari:
+      max-lifetime: 30000
+      maximum-pool-size: 100
+      minimum-idle: 3
+
+logging:
+  level:
+    org.springframework.transaction.interceptor: TRACE
+    org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+    org.hibernate.resource.transaction: DEBUG
+#    org.springframework.boot.autoconfigure: debug
+    org.hibernate.SQL: info  # debug ? ??? jpql sql ?? ??
