@@ -11,3 +11,5 @@ services:
       - TZ=Asia/Seoul
     ports:
       - "13306:3306"
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d

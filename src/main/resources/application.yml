@@ -28,3 +28,4 @@ logging:
     org.hibernate.resource.transaction: DEBUG
 #    org.springframework.boot.autoconfigure: debug
     org.hibernate.SQL: info  # debug ? ??? jpql sql ?? ??
+#    root: debug
