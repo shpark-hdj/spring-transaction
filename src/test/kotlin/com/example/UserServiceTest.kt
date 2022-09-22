@@ -1,11 +1,9 @@
 package com.example
 
-import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import java.lang.RuntimeException
 import javax.persistence.EntityManagerFactory
 import javax.persistence.RollbackException
 
@@ -37,13 +35,7 @@ internal class UserServiceTest {
     }
 
     @Test
-    fun `메소드 A 에서 메소드 B(REQUIRES_NEW)호출시 unCheckedEx 일 경우 상위 트랜잭션까지 모두 롤백`() {
-//        assertThatThrownBy {
-            userService.external()
-//        }.isInstanceOf(RuntimeException::class.java)
-//
-//        val user = userRepository.findAll()
-//
-//        assertThat(user.isEmpty()).isTrue
+    fun `transaction_test`() {
+        userService.external2()
     }
 }

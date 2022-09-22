@@ -26,6 +26,8 @@ logging:
     org.springframework.jdbc.datasource.DataSourceTransactionManager: DEBUG
     org.springframework.orm.jpa.JpaTransactionManager: DEBUG
     org.hibernate.resource.transaction: DEBUG
+    com.zaxxer.hikari: TRACE
+#    com.zaxxer.hikari.HikariConfig: DEBUG
 #    org.springframework.boot.autoconfigure: debug
     org.hibernate.SQL: info
 #    root: debug
